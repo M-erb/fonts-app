@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myFontApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="personal fonts library"/>
+    <meta name="description" content="display page for merb styles">
+    <meta name="theme-color" content="#417BF5">
+    <meta name="p:domain_verify" content="e22136ab81ca3341b04755aadb53f77f"/>
+    <title>Fonts Library</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="content/css/font-page-style.css">
+    <link title="testcss" rel="stylesheet" href="content/css/write-to-fontface.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/lib/angular-route.min.js"></script>
+    <script src="app/lib/angular-animate.min.js"></script>
+    <script src="app/app.js"></script>
+    <!--JS-->
+
+</head>
+<body>
+    <nav ng-include src="'views/nav.html'"></nav>
+
+    <div ng-view></div>
+    <material-picker ng-model="color"></material-picker>
+<material-picker ng-model="color" format="'hex'" size="10" hover-model="hoverColor" size="15"></material-picker>
+
+    <footer class="me-row me-padding-jumbo darkgray_solid">
+      <div class="me-col m8 me-box-medium">
+          <p class="me-text-small me-text-caps">&copy; - Michael Erb - custom 12 column system</p>
+      </div>
+    </footer>
+
+</body>
+</html>

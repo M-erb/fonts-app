@@ -1,0 +1,110 @@
+<header class="me-row me-banner-1-2 blue_solid">
+  <div class="me-col m12 me-topbottom-l">
+      <h1 id="testh1" class="me-textcenter nunito">Fonts</h1>
+  </div>
+</header>
+<div id="fonts_content" class="me-row">
+  <div class="filter_nav">
+    <div class="filter_bar">
+      <a href="" ng-click="openFilters()" class="open_filterNav_btn">Filters</a>
+      <div class="quick_search_wrap">
+        <input class="quick_search" type="text" ng-model="quicksearch" placeholder="quick search..." />
+      </div>
+    </div>
+
+    <div class="popout">
+      <div class="popout_wrap">
+        <div class="popout_header">
+          <a href="" ng-click="closeFilters()" class="close_popout"></a>
+        </div>
+        <div class="filter_form">
+          <div class="me-dropdown-group">
+            <select id="fontSizeDD">
+              <option>edit font size...</option>
+              <option value='500'>500%</option>
+              <option value='400'>400%</option>
+              <option value='300'>300%</option>
+              <option value='200'>200%</option>
+              <option value='100'><span class="option_note">default-</span>100%</option>
+            </select>
+          </div>
+
+          <div class="me-checkbox-group">
+            <span>Serif</span>
+            <div class="me-checkbox">
+              <input ng-click="includeCategory('serif')" type="checkbox" id="serif" name="serif" />
+              <label for="serif"></label>
+            </div>
+          </div>
+          <div class="me-checkbox-group">
+            <span>Sans-Serif</span>
+            <div class="me-checkbox">
+              <input ng-click="includeCategory('sans-serif')" type="checkbox" id="sans-serif" name="sans-serif" />
+              <label for="sans-serif"></label>
+            </div>
+          </div>
+          <div class="me-checkbox-group">
+            <span>Script</span>
+            <div class="me-checkbox">
+              <input ng-click="includeCategory('script')" type="checkbox" id="script" name="script" />
+              <label for="script"></label>
+            </div>
+          </div>
+          <div class="me-checkbox-group">
+            <span>Decorative</span>
+            <div class="me-checkbox">
+              <input ng-click="includeCategory('decorative')" type="checkbox" id="decorative" name="decorative" />
+              <label for="decorative"></label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <main class="fonts_main">
+    <ul class="directory fonts_directory">
+      <li ng-repeat="font in fonts | orderBy: 'name' | filter: quicksearch | filter: categoryFilter" >
+          <div class="font_name_container">
+            <a class="font_name {{font.name}}" href="" ng-click="open=true; messWithSize()">{{font.name}}</a>
+          </div>
+          <span class="font_attributes font_category"><span>Category: </span>{{font.category}}</span>
+          <span class="font_attributes font_tag"><span>Tag: </span>{{font.tag}}</span>
+          <span class="font_attributes font_license"><span>License: </span>{{font.license}}</span>
+          <div class="mess_with_box" ng-show="open">
+            <div class="mess_with_box_content">
+              <div class="mess_with_menu">
+                <span class="mess_with_title {{font.name}}">{{font.name}}</span>
+                <a href="" ng-click="open=false"class="close_mess_with_box"></a>
+              </div>
+              <div class="mess_with_showcase_container">
+                <div class="mess_with_showcase">
+                  <span contenteditable="true" class="showcase_text_area {{font.name}}">What a grumpy puppet you have there 1234567890 ~!@#$%^&*()_+</span>
+                </div>
+                <div class="mess_with_control_wrap">
+                  <div class="me-range-group">
+                    <input type="range" />
+                  </div>
+                  <div class="me-input-group">
+                    <input class="jscolor" value="595959" />
+                  </div>
+                  <div class="me-dropdown-group">
+                    <select class="messWithSize">
+                      <option>edit font size...</option>
+                      <option value='500'>500%</option>
+                      <option value='400'>400%</option>
+                      <option value='300'>300%</option>
+                      <option value='200'>200%</option>
+                      <option value='100'><span class="option_note">default-</span>100%</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </li>
+    </ul>
+  </main>
+</div>

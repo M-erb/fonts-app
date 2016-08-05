@@ -1,0 +1,52 @@
+[{
+	"name": "Spiff",
+	"category": "script",
+	"tag": ["harsh", "handwriten", "skinny"],
+	"license": "MIT",
+	"otfPath": "../fonts/Spiff/Spiff.otf",
+	"ttfPath": "../fonts/Spiff/Spiff.ttf"
+}, {
+	"name": "Willona",
+	"category": "script",
+	"tag": "handwriten",
+	"license": "MIT",
+	"otfPath": "../fonts/Willona/Willona.otf",
+	"ttfPath": "../fonts/Willona/Willona.ttf"
+}, {
+	"name": "WillonaBrush",
+	"category": "script",
+	"tag": "handwriten",
+	"license": "MIT",
+	"ttfPath": "../fonts/Willona Brush/Willona Brush.ttf"
+}, {
+	"name": "Scalliwag",
+	"category": "decorative",
+	"tag": "brush",
+	"license": "MIT",
+	"otfPath": "../fonts/Scalliwag/Scalliwag.otf"
+}, {
+	"name": "Ambarella",
+	"category": "script",
+	"tag": "cursive",
+	"license": "MIT",
+	"otfPath": "../fonts/Ambarella/Ambarella.otf",
+	"ttfPath": "../fonts/Ambarella/Ambarella.ttf"
+}, {
+	"name": "NavyQueen",
+	"category": "decorative",
+	"tag": "uppercase",
+	"license": "MIT",
+	"otfPath": "../fonts/NavyQueen/NavyQueen.otf"
+}, {
+	"name": "NavyQueen-Alt",
+	"category": "decorative",
+	"tag": "uppercase",
+	"license": "MIT",
+	"otfPath": "../fonts/NavyQueen Alt/NavyQueen Alt.otf"
+}, {
+	"name": "NavyQueen-Type",
+	"category": "decorative",
+	"tag": "grung, uppercase",
+	"license": "MIT",
+	"otfPath": "../fonts/NavyQueen Type/NavyQueen Type.otf"
+}]
